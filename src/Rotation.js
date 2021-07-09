@@ -3,7 +3,7 @@ import socketIOClient from 'socket.io-client';
 import { Flex, Text, Box, Heading, Image } from '@chakra-ui/react';
 import spaceShip from './spaceShip.svg';
 
-const ENDPOINT = 'http://192.168.1.141:5000';
+const ENDPOINT = 'http://localhost:5000';
 
 const Rotation = () => {
 	const [ response, setResponse ] = useState({ roll: 0, pitch: 0, yaw: 0 });

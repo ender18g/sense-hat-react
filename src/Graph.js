@@ -4,7 +4,7 @@ import { Flex, Text, Box, Heading, Image, Button } from '@chakra-ui/react';
 
 import Chart from './Chart';
 
-const ENDPOINT = 'http://192.168.1.141:5000';
+const ENDPOINT = 'http://localhost:5000';
 
 const Rotation = () => {
 	const [ response, setResponse ] = useState({ roll: 0, pitch: 0, yaw: 0 });

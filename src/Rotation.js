@@ -3,12 +3,13 @@ import socketIOClient from 'socket.io-client';
 import { Flex, Text, Box, Heading, Image } from '@chakra-ui/react';
 import spaceShip from './spaceShip.svg';
 
-const ENDPOINT = 'http://localhost:5000';
+const ENDPOINT = `http://${window.location.hostname}:5000`;
 
 const Rotation = () => {
 	const [ response, setResponse ] = useState({ roll: 0, pitch: 0, yaw: 0 });
 
 	useEffect(() => {
+		console.log('connect to ', ENDPOINT);
 		const socket = socketIOClient(ENDPOINT);
 		socket.on('imu', (data) => {
 			setResponse(data.data.orientation);

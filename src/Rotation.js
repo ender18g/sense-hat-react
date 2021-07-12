@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import socketIOClient from 'socket.io-client';
 import { Flex, Text, Box, Heading, Image } from '@chakra-ui/react';
 import spaceShip from './spaceShip.svg';
-
-const ENDPOINT = `http://${window.location.hostname}:5000`;
+import ENDPOINT from './Endpoint';
 
 const Rotation = () => {
 	const [ response, setResponse ] = useState({ roll: 0, pitch: 0, yaw: 0 });

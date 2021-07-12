@@ -35,7 +35,7 @@ export default function Chart(props) {
 			</Flex>
 			<Flex justifyContent="center">
 				<LineChart width={700} height={400} data={props.data}>
-					<YAxis type="number" unit="" width={80}>
+					<YAxis type="number" unit="" width={80} domain={[ 'auto', 'auto' ]}>
 						<Label value="Degrees" position="insideLeft" angle={90} />
 					</YAxis>
 					<XAxis dataKey="name">

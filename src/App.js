@@ -5,6 +5,8 @@ import Rotation from './Rotation';
 import Graph from './Graph';
 import Home from './Home';
 import { Route, Switch, NavLink } from 'react-router-dom';
+import Rotation3d from './Rotation3d';
+import PressureGraph from './PressureGraph';
 
 function App() {
 	return (
@@ -20,8 +22,14 @@ function App() {
 					<NavLink to="/spaceship">
 						<Text color="white">Space Ship</Text>
 					</NavLink>
+					<NavLink to="/3d">
+						<Text color="white">3D</Text>
+					</NavLink>
 					<NavLink to="/graph">
 						<Text color="white">Graph</Text>
+					</NavLink>
+					<NavLink to="/pressure_graph">
+						<Text color="white">Pressure</Text>
 					</NavLink>
 					<ColorModeSwitcher />
 				</Flex>
@@ -29,6 +37,8 @@ function App() {
 					<Route exact path="/" component={Home} />
 					<Route exact path="/spaceship" component={Rotation} />
 					<Route exact path="/graph" component={Graph} />
+					<Route exact path="/3d" component={Rotation3d} />
+					<Route exact path="/pressure_graph" component={PressureGraph} />
 				</Switch>
 			</Box>
 		</ChakraProvider>

@@ -22,7 +22,7 @@ import {
 import { Flex, Text, Box, Heading, Image } from '@chakra-ui/react';
 
 export default function Chart(props) {
-	const { data, plotKey } = props;
+	const { data, plotKey, unit } = props;
 	return (
 		<Box>
 			<Flex justifyContent="center">
@@ -36,7 +36,7 @@ export default function Chart(props) {
 			<Flex justifyContent="center">
 				<LineChart width={700} height={400} data={props.data}>
 					<YAxis type="number" unit="" width={80} domain={[ 'auto', 'auto' ]}>
-						<Label value="Degrees" position="insideLeft" angle={90} />
+						<Label value={unit} position="insideLeft" angle={90} />
 					</YAxis>
 					<XAxis dataKey="name">
 						<Label value="Time" angle={0} />

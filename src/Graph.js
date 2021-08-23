@@ -36,7 +36,7 @@ const Rotation = () => {
 			<Heading my="5" textAlign="center" letterSpacing=".1em">
 				IMU Charts
 			</Heading>
-			<Chart data={log} plotKey={show} />
+			<Chart unit="Degrees" data={log} plotKey={show} />
 			<Flex my="7" justifyContent="center">
 				{Object.keys(response).map((k, i) => (
 					<Button mx="2" key={i} onClick={toggleData} name={k}>

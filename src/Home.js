@@ -15,6 +15,7 @@ import {
 	ListItem
 } from '@chakra-ui/react';
 import raspi from './raspi.webp';
+import axis from './sensehat_axis.png';
 import ReactMarkdown from 'react-markdown';
 
 export default function Home() {
@@ -45,9 +46,21 @@ export default function Home() {
 				<Text my="1">The three axes are:</Text>
 				<UnorderedList>
 					<ListItem>Pitch (like a plane taking off)</ListItem>
-					<ListItem>Roll (the plane doing a victory roll)</ListItem>
+					<ListItem>Roll (the plane doing an aileron roll)</ListItem>
 					<ListItem>Yaw (imagine steering the plane like a car)</ListItem>
 				</UnorderedList>
+			</Box>
+			<Flex height="50vh" justifyContent="center">
+				<Image src={axis} />
+			</Flex>
+			<Box m="10">
+				<Heading my="3" size="md">
+					How is acceleration represented?
+				</Heading>
+				<Text my="1">
+					The three axes, (x,y,z) are shown above. The Sense Hat provides acceration scaled to Earth's
+					Gravity. 1.0 Gs = 9.8 m/s^2
+				</Text>
 			</Box>
 		</Box>
 	);

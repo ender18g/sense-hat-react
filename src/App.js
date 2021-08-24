@@ -8,6 +8,7 @@ import { Route, Switch, NavLink } from 'react-router-dom';
 import Rotation3d from './Rotation3d';
 import GenericGraph from './GenericGraph';
 import AccelGraph from './AccelGraph';
+import SendText from './SendText';
 
 function App() {
 	return (
@@ -40,6 +41,9 @@ function App() {
 						<NavLink to="/accel_graph">
 							<Text color="white">Accel Graph</Text>
 						</NavLink>
+						<NavLink to="/send_text">
+							<Text color="white">Send Text</Text>
+						</NavLink>
 						<ColorModeSwitcher />
 					</Flex>
 					<Switch>
@@ -48,6 +52,7 @@ function App() {
 						<Route exact path="/imu_graph" component={Graph} />
 						<Route exact path="/accel_graph" component={AccelGraph} />
 						<Route exact path="/3d" component={Rotation3d} />
+						<Route exact path="/send_text" component={SendText} />
 						<Route
 							exact
 							path="/tph_graph"

@@ -17,6 +17,7 @@ import {
 import raspi from './raspi.webp';
 import axis from './sensehat_axis.png';
 import ReactMarkdown from 'react-markdown';
+import SendText from './SendText';
 
 export default function Home() {
 	return (
@@ -37,7 +38,7 @@ export default function Home() {
 				</UnorderedList>
 			</Box>
 			<Flex height="50vh" justifyContent="center">
-				<Image src={raspi} />
+				<Image src={raspi} objectFit="scale-down" />
 			</Flex>
 			<Box m="10">
 				<Heading my="3" size="md">
@@ -51,7 +52,7 @@ export default function Home() {
 				</UnorderedList>
 			</Box>
 			<Flex height="50vh" justifyContent="center">
-				<Image src={axis} />
+				<Image objectFit="scale-down" src={axis} />
 			</Flex>
 			<Box m="10">
 				<Heading my="3" size="md">
@@ -62,6 +63,7 @@ export default function Home() {
 					Gravity. 1.0 Gs = 9.8 m/s^2
 				</Text>
 			</Box>
+			<SendText />
 		</Box>
 	);
 }
